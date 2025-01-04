@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Slide Viewer</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/@arcgis/core/webmap/WebMap.js"></script>
+    <script src="https://unpkg.com/@arcgis/core/views/MapView.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY"></script>
+</head>
+<body>
+    <header>
+        <h1>Slide Viewer Title</h1>
+    </header>
+    <div class="container">
+        <div class="news-update">
+            <h2>News Updates</h2>
+            <p>Latest news and updates will be displayed here.</p>
+        </div>
+        <div class="tabs">
+            <button class="tab-button" onclick="openTab('info')">Information</button>
+            <button class="tab-button" onclick="openTab('contact')">Contact</button>
+        </div>
+        <div id="info" class="tab-content">
+            <h2>Information</h2>
+            <p>Details about the project or topic.</p>
+        </div>
+        <div id="contact" class="tab-content" style="display:none;">
+            <h2>Contact</h2>
+            <p>Email: example@example.com</p>
+            <p>Phone: (123) 456-7890</p>
+        </div>
+        <div id="arcgis-map" class="map"></div>
+        <div id="google-map" class="map"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
